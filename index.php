@@ -72,7 +72,6 @@ $nama = $_SESSION['nama'];
   <div class="fixed top-0 left-0 w-full h-full bg-black/50 z-40 md:hidden sidebar-overlay"></div>
   <!-- end: Sidebar -->
 
-  <!-- <div class="card bg-white rounded-xl border border-gray-100 p-6 shadow-md shadow-black/5"> -->
   <!-- start: Main -->
   <main class="w-full md:w-[calc(100%-256px)] md:ml-64 bg-gray-200 min-h-screen transition-all main">
     <div class="py-2 px-4 bg-white flex items-center shadow-md shadow-black/5 sticky top-0 left-0 z-30">
@@ -138,41 +137,44 @@ $nama = $_SESSION['nama'];
         $total_mhs = $count_mhs['total'];
         $result = $count / $total_mhs * 100;
         ?>
-        <div class="flex gap-3 justify-start items-center mb-6">
-          <div class="flex items-center flex-wrap">
-            <div class="text-2xl font-semibold mb-1 w-full"><?= $count ?></div>
-            <div class="text-sm font-medium text-gray-400 ml-2">Banyak Mahasiswa Upload Document</div>
-          </div>
-          <div class="flex items-center flex-wrap">
-            <div class="text-2xl font-semibold mb-1 w-full"><?= $total_mhs ?></div>
-            <div class="text-sm font-medium text-gray-400 ml-2">Total Seluruh Mahasiswa</div>
-          </div>
-          <div class="dropdown ml-auto">
-            <button type="button" class="dropdown-toggle text-gray-400 hover:text-gray-600">
-              <i class="ri-more-fill"></i>
-            </button>
-            <ul class="dropdown-menu z-30 hidden py-1.5 rounded-xl bg-white border border-gray-100 w-full max-w-[140px]">
-              <li>
-                <a href="#" class="flex items-center text-[13px] py-1.5 px-4 text-gray-600 hover:text-blue-500 hover:bg-gray-50">Profile</a>
-              </li>
-              <li>
-                <a href="#" class="flex items-center text-[13px] py-1.5 px-4 text-gray-600 hover:text-blue-500 hover:bg-gray-50">Setting</a>
-              </li>
-              <li>
-                <a href="#" class="flex items-center text-[13px] py-1.5 px-4 text-gray-600 hover:text-blue-500 hover:bg-gray-50">Logout</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="flex items-center">
-          <div class="w-full bg-gray-100 rounded-full h-4">
-            <div class="h-full bg-blue-500 rounded-full p-1 w-[<?= $result ?>%]">
-              <div class="w-2 h-2 rounded-full bg-white ml-auto"></div>
+        <div class="card bg-white rounded-xl border border-gray-100 p-6 shadow-md shadow-black/5">
+          <div class="flex gap-3 justify-start items-center mb-6">
+            <div class="flex items-center flex-wrap">
+              <div class="text-2xl font-semibold mb-1 w-full"><?= $count ?></div>
+              <div class="text-sm font-medium text-gray-400 ml-2">Banyak Mahasiswa Upload Document</div>
+            </div>
+            <div class="flex items-center flex-wrap">
+              <div class="text-2xl font-semibold mb-1 w-full"><?= $total_mhs ?></div>
+              <div class="text-sm font-medium text-gray-400 ml-2">Total Seluruh Mahasiswa</div>
+            </div>
+            <div class="dropdown ml-auto">
+              <button type="button" class="dropdown-toggle text-gray-400 hover:text-gray-600">
+                <i class="ri-more-fill"></i>
+              </button>
+              <ul class="dropdown-menu z-30 hidden py-1.5 rounded-xl bg-white border border-gray-100 w-full max-w-[140px]">
+                <li>
+                  <a href="#" class="flex items-center text-[13px] py-1.5 px-4 text-gray-600 hover:text-blue-500 hover:bg-gray-50">Profile</a>
+                </li>
+                <li>
+                  <a href="#" class="flex items-center text-[13px] py-1.5 px-4 text-gray-600 hover:text-blue-500 hover:bg-gray-50">Setting</a>
+                </li>
+                <li>
+                  <a href="#" class="flex items-center text-[13px] py-1.5 px-4 text-gray-600 hover:text-blue-500 hover:bg-gray-50">Logout</a>
+                </li>
+              </ul>
             </div>
           </div>
-          <span class="text-sm font-medium text-gray-600 ml-4"><?= $result ?>%</span>
+          <div class="flex items-center">
+            <div class="w-full bg-gray-100 rounded-full h-4">
+              <div class="h-full bg-blue-500 rounded-full p-1 w-[<?= $result ?>%]">
+                <div class="w-2 h-2 rounded-full bg-white ml-auto"></div>
+              </div>
+            </div>
+            <span class="text-sm font-medium text-gray-600 ml-4"><?= $result ?>%</span>
+          </div>
         </div>
       </div>
+    </div>
     </div>
     <!-- </div> -->
   </main>
